@@ -1,0 +1,3 @@
+alert( String(true) + 1 );
+
+Результат: true1
