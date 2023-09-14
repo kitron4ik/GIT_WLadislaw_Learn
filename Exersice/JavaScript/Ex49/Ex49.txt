@@ -1,0 +1,60 @@
+1) let num = 3;
+   alert(++num);
+
+Результат: 4
+
+2)let num = 3;
+  alert(num++);
+
+Результат: 3
+
+3)let num = 3;
+  alert(--num);
+
+Результат: 2
+
+4)let num = 3;
+  alert(num--);
+
+Результат: 3
+
+5)let num1 = 3;
+  let num2 = ++num1;
+  alert(num1);
+  alert(num2);
+
+Результат: num1 = 4
+	   num2 = 4
+
+6)let num1 = 3;
+  let num2 = num1++;
+  alert(num1);
+  alert(num2);
+
+Результат: num1 = 3
+	   num2 = 4
+
+7) let num1 = 3;
+   let num2 = --num1;
+   alert(num1);
+   alert(num2);
+
+Результат: num1 = 2
+	   num2 = 2
+
+8)let num1 = 3;
+  let num2 = num1--;
+  alert(num1);
+  alert(num2);
+
+Результат: num1 = 3
+	   num2 = 2
+
+9)let num1 = 3;
+  num1++;
+  let num2 = num1--;
+  alert(num1++);
+  alert(--num2);
+
+Результат: num1 = 4
+	   num2 = 2

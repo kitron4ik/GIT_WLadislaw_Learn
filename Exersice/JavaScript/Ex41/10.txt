@@ -1,0 +1,4 @@
+let test = Boolean(false);
+alert(test);
+
+Результат: false
