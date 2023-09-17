@@ -1,0 +1,11 @@
+.success {
+	color: green;
+	
+}
+.error {
+	font-size: 60px;
+}
+.large {
+	font-family: 'Calibri';
+}
+
