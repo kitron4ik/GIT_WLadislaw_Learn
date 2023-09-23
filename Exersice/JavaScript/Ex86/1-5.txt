@@ -1,0 +1,12 @@
+console.log( typeof {x: 1, y: 2, z: 3} ); Выведет: object
+
+console.log( typeof [1, 2, 3]); Выведет: object
+
+let arr = [1, 2, 3];
+console.log( typeof arr); Выведет: object
+
+let arr = [1, 2, 3];
+console.log( typeof arr[0]); Выведет: number
+
+let arr = ['1', '2', '3'];
+console.log( typeof arr[0]); Выведет: string

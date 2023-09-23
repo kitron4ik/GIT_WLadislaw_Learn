@@ -1,0 +1,28 @@
+#elem1 {
+	background-color: red;
+	left:30px;
+	top:0px;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	border: 1px solid red;
+}
+#elem2 {
+	background-color: blue;
+	left:65px;
+	top:30px;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	border: 1px solid blue;
+}
+
+#elem3 {
+	background-color: green;
+	left:100px;
+	top:60px;
+	position:absolute;
+	width: 50px;
+	height: 50px;
+	border: 1px solid green;
+}
