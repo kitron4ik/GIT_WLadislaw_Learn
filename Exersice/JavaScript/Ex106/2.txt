@@ -1,0 +1,12 @@
+let num = 3;
+		
+if (num > 5 || num > 0 && num < 3) {
+	console.log('+++');
+} else {
+	console.log('---');
+}
+
+Приоритет выполнения: 
+1) num>5
+2)или
+3) 0<num<3

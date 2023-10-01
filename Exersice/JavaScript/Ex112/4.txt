@@ -1,0 +1,9 @@
+let test = 3 * 'abc';
+
+if (test) {
+	console.log('+++');
+} else {
+	console.log('---');
+}
+
+Результат:---

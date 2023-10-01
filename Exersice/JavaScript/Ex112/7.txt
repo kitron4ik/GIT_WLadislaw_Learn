@@ -1,0 +1,9 @@
+let test;
+
+if (test) {
+	console.log('+++');
+} else {
+	console.log('---');
+}
+
+Результат: ---
