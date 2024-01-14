@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Options</title>
+</head>
+<body>
+    <select id="select">
+        <option value="one">один</option>
+        <option value="two">два</option>
+        <option value="three">три</option>
+    </select>
+
+    <script>
+        let optionsAll = document.querySelectorAll('#select option');
+        console.log(optionsAll);
+
+        let select = document.querySelector('#select');
+        let optionsInSelect = select.querySelectorAll('option');
+        console.log(optionsInSelect);
+    </script>
+</body>
+</html>
+

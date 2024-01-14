@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecting an Option in JavaScript</title>
+</head>
+<body>
+    <select id="select">
+        <option value="one">один</option>
+        <option value="two">два</option>
+        <option value="three">три</option>
+    </select>
+
+    <button id="selectLastOption">Выбрать последний пункт</button>
+
+    <script>
+        let select = document.querySelector('#select');
+        let button = document.querySelector('#selectLastOption');
+
+        button.addEventListener('click', function () {
+            let lastOption = select[select.options.length - 1];
+            lastOption.selected = true;
+        });
+    </script>
+</body>
+</html>
+

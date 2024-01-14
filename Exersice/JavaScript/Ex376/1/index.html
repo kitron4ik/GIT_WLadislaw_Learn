@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input Event in JavaScript</title>
+    <style>
+        #inputTask2 {
+            border: 2px solid black;
+        }
+
+        #outputTask2 {
+            color: green;
+        }
+
+        #outputTask2.exceeded {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // Задание 1
+        let inputTask1 = document.querySelector('#inputTask1');
+
+        inputTask1.addEventListener('input', function () {
+            if (this.value.length === 5) {
+                console.log('Text length has reached 5 characters.');
+            }
+        });
+
+        // Задание 2
+        let inputTask2 = document.querySelector('#inputTask2');
+        let outputTask2 = document.querySelector('#outputTask2');
+
+        inputTask2.addEventListener('input', function () {
+            let remainingCharacters = 5 - this.value.length;
+
+            if (remainingCharacters >= 0) {
+                outputTask2.textContent = `You can enter ${remainingCharacters} more characters.`;
+                outputTask2.classList.remove('exceeded');
+            } else {
+                outputTask2.textContent = `Exceeded by ${Math.abs(remainingCharacters)} characters.`;
+                outputTask2.classList.add('exceeded');
+            }
+        });
+    </script>
+    <!-- Задание 1 -->
+    <label for="inputTask1">Input for Task 1:</label>
+    <input id="inputTask1" type="text">
+
+    <!-- Задание 2 -->
+    <label for="inputTask2">Input for Task 2 (Max 5 characters):</label>
+    <input id="inputTask2" type="text">
+    <p id="outputTask2"></p>
+</body>
+
+</html>

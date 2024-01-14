@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prevent Default Example</title>
+</head>
+<body>
+    <a href="/" id="link">Link 1</a>
+    <a href="/page" id="link2">Link 2</a>
+
+    <script>
+        let link = document.querySelector('#link');
+        let link2 = document.querySelector('#link2');
+
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            console.log('Clicked on Link 1. Href:', this.getAttribute('href'));
+        });
+
+        link2.addEventListener('click', function (event) {
+            event.preventDefault();
+            console.log('Clicked on Link 2. Href:', this.getAttribute('href'));
+        });
+    </script>
+</body>
+</html>

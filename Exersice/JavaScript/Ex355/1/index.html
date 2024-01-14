@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Styles with CSS Classes in JavaScript</title>
+    <style>
+        .colored {
+            color: green;
+        }
+
+        .crossed {
+            text-decoration: line-through;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Задание 1 -->
+    <p id="paragraph">Click me to apply styles!</p>
+    <button onclick="toggleStyle('colored')">Make Green (Toggle)</button>
+    <button onclick="toggleStyle('crossed')">Cross Out (Toggle)</button>
+    <button onclick="toggleStyle('bold')">Make Bold (Toggle)</button>
+    <button onclick="toggleStyle('red')">Make Red (Toggle)</button>
+
+    <script>
+        function toggleStyle(styleClass) {
+            const paragraph = document.getElementById('paragraph');
+            paragraph.classList.toggle(styleClass);
+        }
+    </script>
+</body>
+
+</html>

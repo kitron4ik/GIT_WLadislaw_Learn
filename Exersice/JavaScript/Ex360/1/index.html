@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finding Neighbors of an Element in JavaScript</title>
+    <style>
+        li {
+            margin-bottom: 5px;
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Задание 1-->
+    <ul>
+        <li>text</li>
+        <li>text</li>
+        <li id="elem">text</li>
+        <li>text</li>
+        <li>text</li>
+    </ul>
+
+    <script>
+        // Задание 1
+        let elem = document.getElementById('elem');
+        let prevSibling = elem.previousElementSibling;
+        if (prevSibling) {
+            prevSibling.textContent += '!';
+        }
+    </script>
+
+    <!-- Задание 2  -->
+    <ul>
+        <li>text</li>
+        <li>text</li>
+        <li id="elem">text</li>
+        <li>text</li>
+        <li>text</li>
+    </ul>
+
+    <script>
+        // Задание 2
+        let elem2 = document.getElementById('elem');
+        let nextSibling = elem2.nextElementSibling;
+        if (nextSibling) {
+            nextSibling.textContent += '!';
+        }
+    </script>

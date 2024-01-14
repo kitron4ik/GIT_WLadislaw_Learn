@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with Checkboxes in JavaScript</title>
+</head>
+
+<body>
+    <script>
+        // Задание 1
+        let checkbox1 = document.querySelector('#checkbox1');
+        let button1SetChecked = document.querySelector('#button1SetChecked');
+        let button1SetUnchecked = document.querySelector('#button1SetUnchecked');
+
+        button1SetChecked.addEventListener('click', function () {
+            checkbox1.checked = true;
+        });
+
+        button1SetUnchecked.addEventListener('click', function () {
+            checkbox1.checked = false;
+        });
+
+        // Задание 2
+        let checkbox2 = document.querySelector('#checkbox2');
+        let button2 = document.querySelector('#button2');
+        let resultParagraph = document.querySelector('#resultParagraph');
+
+        button2.addEventListener('click', function () {
+            resultParagraph.textContent = checkbox2.checked ? 'привет' : 'пока';
+        });
+    </script>
+    <!-- Задание 1 -->
+    <input type="checkbox" id="checkbox1">
+    <button id="button1SetChecked">Set Checked</button>
+    <button id="button1SetUnchecked">Set Unchecked</button>
+
+    <!-- Задание 2 -->
+    <input type="checkbox" id="checkbox2">
+    <button id="button2">Show Greeting</button>
+    <p id="resultParagraph"></p>
+</body>
+
+</html>

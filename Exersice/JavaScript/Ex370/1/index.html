@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with Textarea in JavaScript</title>
+</head>
+
+<body>
+    <script>
+        // Задание 1
+        let textarea = document.querySelector('#textarea');
+        let paragraph = document.querySelector('#paragraph');
+
+        textarea.addEventListener('blur', function () {
+            paragraph.textContent = this.value;
+        });
+    </script>
+    <textarea id="textarea"></textarea>
+    <p id="paragraph"></p>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of Numbers</title>
+</head>
+<body>
+    <input type="number" id="input1" placeholder="Enter number 1">
+    <input type="number" id="input2" placeholder="Enter number 2">
+    <p id="result"></p>
+    <a href="#" id="calculate">Calculate Sum</a>
+
+    <script>
+        let input1 = document.querySelector('#input1');
+        let input2 = document.querySelector('#input2');
+        let resultParagraph = document.querySelector('#result');
+        let calculateLink = document.querySelector('#calculate');
+
+        calculateLink.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            let num1 = parseFloat(input1.value) || 0;
+            let num2 = parseFloat(input2.value) || 0;
+            let sum = num1 + num2;
+
+            resultParagraph.textContent = 'Sum: ' + sum;
+        });
+    </script>
+</body>
+</html>
+

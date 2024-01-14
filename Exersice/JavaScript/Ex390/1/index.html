@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Type</title>
+    <style>
+        .green {
+            color: green;
+        }
+
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <button id="elem">text</button>
+
+    <script>
+        let elem = document.querySelector('#elem');
+
+        elem.addEventListener('click', func);
+        elem.addEventListener('dblclick', func);
+
+        function func(event) {
+            if (event.type === 'click') {
+                elem.classList.add('green');
+                elem.classList.remove('red');
+            } else if (event.type === 'dblclick') {
+                elem.classList.remove('green');
+                elem.classList.add('red');
+            }
+        }
+    </script>
+</body>
+</html>
+
+

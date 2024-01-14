@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Elements with CSS Classes in JavaScript</title>
+    <style>
+        .colored {
+            color: green;
+        }
+
+        .crossed {
+            text-decoration: line-through;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Задание 1 -->
+    <p id="paragraph">Click me to apply styles!</p>
+    <button onclick="applyStyle('colored')">Make Green</button>
+    <button onclick="applyStyle('crossed')">Cross Out</button>
+    <button onclick="applyStyle('bold')">Make Bold</button>
+    <button onclick="applyStyle('red')">Make Red</button>
+
+    <script>
+        function applyStyle(styleClass) {
+            const paragraph = document.getElementById('paragraph');
+            paragraph.classList.add(styleClass);
+        }
+    </script>
+</body>
+
+</html>

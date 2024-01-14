@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubbling Example</title>
+    <style>
+        #elem1 {
+            background-color: green;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        #elem2 {
+            background-color: lightblue;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        #elem3 {
+            background-color: red;
+            padding: 20px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="elem1">
+        <div id="elem2">
+            <div id="elem3"></div>
+        </div>
+    </div>
+
+    <script>
+        let elem1 = document.querySelector('#elem1');
+        let elem2 = document.querySelector('#elem2');
+        let elem3 = document.querySelector('#elem3');
+
+        elem1.addEventListener('click', function () {
+            alert('Green');
+        });
+
+        elem2.addEventListener('click', function () {
+            alert('Lightblue');
+        });
+
+        elem3.addEventListener('click', function () {
+            alert('Red');
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selected Index</title>
+</head>
+
+<body>
+    <!-- Задание 1 -->
+    <input type="number" id="inputNumber">
+    <select id="dayOfWeek">
+        <option value="1">Monday</option>
+        <option value="2">Tuesday</option>
+        <option value="3">Wednesday</option>
+        <option value="4">Thursday</option>
+        <option value="5">Friday</option>
+        <option value="6">Saturday</option>
+        <option value="7">Sunday</option>
+    </select>
+
+    <!-- Задание 2 -->
+    <select id="currentDay">
+        <option value="1">Monday</option>
+        <option value="2">Tuesday</option>
+        <option value="3">Wednesday</option>
+        <option value="4">Thursday</option>
+        <option value="5">Friday</option>
+        <option value="6">Saturday</option>
+        <option value="7">Sunday</option>
+    </select>
+
+    <script>
+        // Задание 1
+        let inputNumber = document.querySelector('#inputNumber');
+        let dayOfWeekSelect = document.querySelector('#dayOfWeek');
+
+        inputNumber.addEventListener('blur', function () {
+            let selectedIndex = parseInt(inputNumber.value, 10) - 1;
+            dayOfWeekSelect.selectedIndex = selectedIndex;
+        });
+
+        // Задание 2
+        let currentDaySelect = document.querySelector('#currentDay');
+        let currentDay = (new Date()).getDay();
+        currentDaySelect.selectedIndex = currentDay;
+    </script>
+</body>
+
+</html>

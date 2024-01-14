@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating Elements in JavaScript</title>
+    <style>
+        li {
+            display: inline-block;
+            margin-right: 10px;
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Задание 1 -->
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+    <button onclick="floatLeft()">Float Left</button>
+
+    <script>
+        function floatLeft() {
+            const listItems = document.querySelectorAll('li');
+            listItems.forEach(item => {
+                item.style.cssFloat = 'left';
+            });
+        }
+    </script>
+</body>
+
+</html>

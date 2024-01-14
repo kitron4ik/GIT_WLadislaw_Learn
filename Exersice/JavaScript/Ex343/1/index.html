@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Names with Hyphens</title>
+</head>
+<body>
+    <!-- Задание 1 -->
+    <div id="elem" data-product-price="1000" data-product-amount="5">товар яблоки</div>
+    <script>
+        const elem = document.getElementById('elem');
+
+        elem.addEventListener('click', function() {
+            const price = parseInt(this.dataset.productPrice);
+            const amount = parseInt(this.dataset.productAmount);
+            const total = price * amount;
+
+            this.textContent += `, стоимость: ${total}`;
+        });
+    </script>
+</body>
+</html>
+

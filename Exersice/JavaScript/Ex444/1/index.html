@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Link Removal</title>
+</head>
+
+<body>
+
+  <!-- Задание 1 -->
+  <div id="parent">
+    <p>text1</p>
+    <p>text2</p>
+    <p>text3</p>
+  </div>
+
+  <script>
+    let elems = document.querySelectorAll('#parent p');
+
+    for (let elem of elems) {
+      let remove = document.createElement('a');
+      remove.href = '';
+      remove.textContent = 'remove';
+      elem.appendChild(remove);
+
+      remove.addEventListener('click', function (event) {
+        elem.remove();
+        event.preventDefault();
+      });
+    }
+  </script>
+
+  <!-- Задание 2 -->
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+
+  <script>
+    let listItems = document.querySelectorAll('ul li');
+
+    for (let listItem of listItems) {
+      let removeLink = document.createElement('a');
+      removeLink.href = '';
+      removeLink.textContent = 'remove';
+      listItem.appendChild(removeLink);
+
+      removeLink.addEventListener('click', function (event) {
+        listItem.remove();
+        event.preventDefault();
+      });
+    }
+  </script>

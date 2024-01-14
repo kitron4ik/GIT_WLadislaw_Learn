@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Event Bubbling Example</title>
+    <style>
+        #parent {
+            padding: 20px;
+            border: 1px solid black;
+        }
+
+        #block:not(.active) {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <button id="button">Click me</button>
+        <div id="block">
+            Text
+        </div>
+    </div>
+
+    <script>
+        let parent = document.getElementById('parent');
+        let button = document.getElementById('button');
+        let block = document.getElementById('block');
+
+        button.addEventListener('click', function (event) {
+            // Отменяем всплытие события
+            event.stopPropagation();
+            block.classList.add('active');
+        });
+
+        parent.addEventListener('click', function () {
+            block.classList.remove('active');
+        });
+    </script>
+</body>
+</html>
+

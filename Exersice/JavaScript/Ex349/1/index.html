@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checking CSS Classes</title>
+</head>
+
+<body>
+    <!-- Задание 1 -->
+    <p id="elem" class="www ggg zzz"></p>
+    <script>
+        const elem = document.getElementById('elem');
+        const containsClass = elem.classList.contains('ggg');
+        console.log(containsClass);
+    </script>
+</body>
+
+</html>

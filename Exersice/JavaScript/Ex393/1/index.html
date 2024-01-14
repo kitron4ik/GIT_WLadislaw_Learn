@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Press Event</title>
+</head>
+<body>
+    <input id="input" type="text">
+    <p id="output"></p>
+
+    <script>
+        let input = document.querySelector('#input');
+        let output = document.querySelector('#output');
+
+        input.addEventListener('keypress', function (event) {
+            output.textContent = `Key: ${event.key}, Code: ${event.code}`;
+        });
+
+        input.addEventListener('keydown', function (event) {
+            if (event.code === 'Enter') {
+                output.textContent = `Enter key pressed. Input value: ${input.value}`;
+                input.value = '';
+            }
+        });
+    </script>
+</body>
+</html>
+

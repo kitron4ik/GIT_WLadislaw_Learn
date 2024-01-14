@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node Text in JavaScript</title>
+</head>
+
+<body>
+    <script>
+        // Задание 1
+        let elem1 = document.querySelector('#elem');
+        for (let node of elem1.childNodes) {
+            console.log(node.textContent);
+        }
+
+        // Задание 2
+        let elem2 = document.querySelector('#elem');
+        for (let node of elem2.childNodes) {
+            if (node.nodeType === 3 || node.nodeType === 8) {
+                console.log(node.textContent);
+            }
+        }
+    </script>
+</body>

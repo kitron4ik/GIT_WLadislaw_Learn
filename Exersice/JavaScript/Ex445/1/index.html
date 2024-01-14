@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Element on Blur</title>
+</head>
+
+<body>
+
+  <!-- Задание 1 -->
+  <div id="parent1">
+    <p id="elem1">text</p>
+    <input id="input1">
+  </div>
+
+  <script>
+    let elem1 = document.querySelector('#elem1');
+    let input1 = document.querySelector('#input1');
+
+    input1.addEventListener('input', function () {
+      elem1.textContent = this.value;
+    });
+
+    input1.value = elem1.textContent;
+  </script>
+
+  <!-- Задание 2 -->
+  <div id="parent2">
+    <p id="elem2">text</p>
+  </div>
+
+  <script>
+    let elem2 = document.querySelector('#elem2');
+
+    elem2.addEventListener('click', function () {
+      let input2 = document.createElement('input');
+      input2.value = elem2.textContent;
+
+      input2.addEventListener('input', function () {
+        elem2.textContent = this.value;
+      });
+
+      input2.addEventListener('blur', function () {
+        elem2.textContent = this.value;
+        this.remove();
+      });
+
+      elem2.parentElement.appendChild(input2);
+      input2.focus();
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Attributes Without Values</title>
+</head>
+
+<body>
+    <script>
+        // Задание 1
+        let elem1 = document.querySelector('#elem1');
+        let button1 = document.querySelector('#button1');
+
+        button1.addEventListener('click', function () {
+            elem1.disabled = !elem1.disabled;
+        });
+    </script>
+    <!-- Задание 1 -->
+    <input id="elem1" disabled>
+    <button id="button1" type="submit">Toggle Disabled</button>
+
+    <script>
+        // Задание 2
+        let checkbox2 = document.querySelector('#checkbox2');
+        let button2 = document.querySelector('#button2');
+
+        button2.addEventListener('click', function () {
+            checkbox2.checked = !checkbox2.checked;
+        });
+    </script>
+
+    <!-- Задание 2 -->
+    <input type="checkbox" id="checkbox2">
+    <button id="button2">Toggle Checkbox</button>
+</body>
+
+</html>

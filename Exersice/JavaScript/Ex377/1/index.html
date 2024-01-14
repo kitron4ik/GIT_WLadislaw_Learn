@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>focus and blur Methods in JavaScript</title>
+</head>
+
+<body>
+    <script>
+        // Задание 1
+        let input1 = document.querySelector('#input1');
+        let input2 = document.querySelector('#input2');
+
+        input1.addEventListener('input', function () {
+            if (this.value.length === 2) {
+                input2.focus();
+            }
+        });
+
+        input2.addEventListener('input', function () {
+            if (this.value.length === 2) {
+                this.blur();
+            }
+        });
+    </script>
+    <!-- Задание 1 -->
+    <label for="input1">Input 1:</label>
+    <input id="input1" type="text">
+
+    <label for="input2">Input 2:</label>
+    <input id="input2" type="text">
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifier Keys Event</title>
+    <style>
+        ul {
+            padding: 30px;
+            border: 1px solid red;
+        }
+
+        li {
+            list-style-type: none;
+            margin-bottom: 20px;
+            border: 1px dashed black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">Click me (Ctrl/Alt/Shift)</button>
+
+    <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+
+    <script>
+        let btn = document.querySelector('#btn');
+        let list = document.querySelector('#list');
+
+        btn.addEventListener('click', function (event) {
+            if (event.ctrlKey) {
+                console.log('Ctrl key pressed');
+            }
+
+            if (event.altKey) {
+                console.log('Alt key pressed');
+                list.style.backgroundColor = 'red';
+            }
+
+            if (event.shiftKey) {
+                console.log('Shift key pressed');
+            }
+        });
+
+        list.addEventListener('click', function (event) {
+            let li = event.target;
+            
+            if (event.ctrlKey) {
+                li.textContent += '1';
+            }
+
+            if (event.shiftKey) {
+                li.textContent += '2';
+            }
+        });
+    </script>
+</body>
+</html>
+

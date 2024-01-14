@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change Event in JavaScript</title>
+    <style>
+        #inputTask4 {
+            border: 2px solid black;
+        }
+
+        #inputTask4.valid {
+            border-color: green;
+        }
+
+        #inputTask4.invalid {
+            border-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // Задание 1
+        let elem1 = document.querySelector('#elem1');
+        let output1 = document.querySelector('#output1');
+
+        elem1.addEventListener('change', function () {
+            output1.textContent = this.value;
+        });
+
+        // Задание 2
+        let checkbox = document.querySelector('#checkbox');
+        let output2 = document.querySelector('#output2');
+
+        checkbox.addEventListener('change', function () {
+            output2.textContent = this.checked ? 'Checked' : 'Unchecked';
+        });
+    </script>
+</body>

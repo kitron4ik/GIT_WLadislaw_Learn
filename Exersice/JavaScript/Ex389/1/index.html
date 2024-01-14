@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Coordinates</title>
+</head>
+<body>
+    <div id="coords">X: 0, Y: 0</div>
+
+    <script>
+        document.addEventListener('mousemove', function (event) {
+            let coordsDiv = document.getElementById('coords');
+            coordsDiv.textContent = `X: ${event.clientX}, Y: ${event.clientY}`;
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with Select Options</title>
+</head>
+<body>
+    <select id="select">
+        <option value="one">один</option>
+        <option value="two" selected>два</option>
+        <option value="three">три</option>
+    </select>
+
+    <script>
+        let select = document.querySelector('#select');
+
+        for (let option of select.options) {
+            if (option.selected) {
+                option.textContent += '!';
+            } else {
+                option.textContent += '?';
+            }
+        }
+    </script>
+</body>
+</html>
+

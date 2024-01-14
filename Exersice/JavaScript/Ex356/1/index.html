@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Element Visibility in JavaScript</title>
+    <style>
+        #elem {
+            display: none;
+            width: 200px;
+            height: 200px;
+            border: 1px solid green;
+        }
+
+        #elem.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="button">Click Me</button>
+    <div id="elem"></div>
+
+    <script>
+        let button = document.querySelector('#button');
+        let elem = document.querySelector('#elem');
+
+        button.addEventListener('click', function () {
+            elem.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

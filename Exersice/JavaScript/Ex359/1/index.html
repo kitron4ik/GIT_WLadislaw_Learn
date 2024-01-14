@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finding All Parents of an Element in JavaScript</title>
+    <style>
+        div {
+            border: 2px solid black;
+            padding: 10px;
+        }
+
+        .www {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Задание 1 -->
+    <header>
+        <div>
+            <p>
+                <span id="elem">Element</span>
+            </p>
+        </div>
+    </header>
+
+    <script>
+        // Задание 1
+        let elem = document.getElementById('elem');
+        let closestDiv = elem.closest('div');
+        closestDiv.style.border = '2px solid red';
+    </script>
+
+    <!-- Задание 2 -->
+    <header>
+        <div class="www">
+            <p class="www">
+                <span id="elem">Element</span>
+            </p>
+        </div>
+    </header>
+
+    <script>
+        // Задание 2
+        let elem2 = document.getElementById('elem');
+        let closestWWW = elem2.closest('.www');
+        closestWWW.style.backgroundColor = 'lightgreen';
+    </script>
+</body>
+
+</html>

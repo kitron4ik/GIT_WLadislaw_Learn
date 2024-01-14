@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Selected Option in JavaScript</title>
+</head>
+<body>
+    <select id="select">
+        <option value="one">один</option>
+        <option value="two">два</option>
+        <option value="three">три</option>
+    </select>
+
+    <button id="getSelectedOption">Получить выбранный пункт</button>
+    <button id="addExclamation">Добавить восклицательный знак</button>
+
+    <script>
+        let select = document.querySelector('#select');
+        let getSelectedOptionButton = document.querySelector('#getSelectedOption');
+        let addExclamationButton = document.querySelector('#addExclamation');
+
+        getSelectedOptionButton.addEventListener('click', function () {
+            let selectedOption = select[select.selectedIndex];
+            alert(selectedOption.text);
+        });
+
+        addExclamationButton.addEventListener('click', function () {
+            let selectedOption = select[select.selectedIndex];
+            selectedOption.text += '!';
+        });
+    </script>
+</body>
+</html>
+

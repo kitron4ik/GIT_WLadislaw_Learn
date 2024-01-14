@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Difference Between DOM Node Properties</title>
+</head>
+
+<body>
+    <script>
+        // Задание 1
+        let elem1 = document.querySelector('#elem1');
+        console.log(elem1.lastChild);            // текст
+        console.log(elem1.lastElementChild);     // тег span
+
+        // Задание 2
+        let elem2 = document.querySelector('#elem2');
+        console.log(elem2.nextSibling);          // текст
+        console.log(elem2.nextElementSibling);   // тег span
+    </script>
+</body>

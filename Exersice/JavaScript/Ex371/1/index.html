@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disabled Attribute in JavaScript</title>
+</head>
+
+<body>
+    <script>
+        // Задание 1
+        let input1 = document.querySelector('#input1');
+        let button1 = document.querySelector('#button1');
+
+        button1.addEventListener('click', function () {
+            input1.disabled = true;
+        });
+
+        // Задание 2
+        let input2 = document.querySelector('#input2');
+        let button2Disable = document.querySelector('#button2Disable');
+        let button2Enable = document.querySelector('#button2Enable');
+
+        button2Disable.addEventListener('click', function () {
+            input2.disabled = true;
+        });
+
+        button2Enable.addEventListener('click', function () {
+            input2.disabled = false;
+        });
+    </script>
+</body>
