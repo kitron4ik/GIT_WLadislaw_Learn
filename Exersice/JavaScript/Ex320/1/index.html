@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+	</head>
+	<body>
+		<p id="paragraph"><b>Initial Text</b></p>
+		<button id="readButton">Read HTML</button>
+		<button id="changeButton">Change to Bold</button>
+
+		<script>
+			let paragraph = document.querySelector('#paragraph');
+			let readButton = document.querySelector('#readButton');
+			let changeButton = document.querySelector('#changeButton');
+
+			readButton.addEventListener('click', function() {
+				console.log(paragraph.innerHTML);
+			});
+
+			changeButton.addEventListener('click', function() {
+				paragraph.innerHTML = '<b>New Text</b>';
+			});
+		</script>
+	</body>
+</html>
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+	<!-- Task 1 -->
+	<input id="button1" type="submit" value="text1">
+	<input id="button2" type="submit" value="text2">
+	<input id="button3" type="submit" value="text3">
+
+	<script>
+		let button1 = document.querySelector('#button1');
+		let button2 = document.querySelector('#button2');
+		let button3 = document.querySelector('#button3');
+
+		function func() {
+			console.log(this.value + '!');
+		}
+
+		button1.addEventListener('click', func);
+		button2.addEventListener('click', func);
+		button3.addEventListener('click', func);
+	</script>
+
+	<!-- Task 2 -->
+	<input id="input1" type="text" value="2">
+	<input id="input2" type="text" value="5">
+	<input id="input3" type="text" value="8">
+
+	<script>
+		let input1 = document.querySelector('#input1');
+		let input2 = document.querySelector('#input2');
+		let input3 = document.querySelector('#input3');
+
+		function squareOnBlur() {
+			this.value = Math.pow(parseInt(this.value), 2);
+		}
+
+		input1.addEventListener('blur', squareOnBlur);
+		input2.addEventListener('blur', squareOnBlur);
+		input3.addEventListener('blur', squareOnBlur);
+	</script>
+</body>
+
+</html>
+

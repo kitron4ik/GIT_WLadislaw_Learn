@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+	<!-- Задание 1 -->
+	<div>1</div>
+	<div>2</div>
+	<div>3</div>
+	<div>4</div>
+	<div>5</div>
+
+	<script>
+		let divs = document.querySelectorAll('div');
+
+		for (let div of divs) {
+			div.addEventListener('click', function () {
+				this.textContent++;
+			});
+		}
+	</script>
+</body>
+
+</html>
+

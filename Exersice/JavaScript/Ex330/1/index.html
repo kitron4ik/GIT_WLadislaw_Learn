@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+	<!-- Задание 1 -->
+	<p>text1</p>
+	<p>text2</p>
+	<p>text3</p>
+
+	<script>
+		function func() {
+			console.log(this.textContent);
+		}
+
+		let paragraphs = document.querySelectorAll('p');
+
+		for (let paragraph of paragraphs) {
+			paragraph.addEventListener('click', func);
+		}
+	</script>
+
+	<!-- Задание 2 -->
+	<input type="number" id="input1" value="2">
+	<input type="number" id="input2" value="5">
+	<input type="number" id="input3" value="8">
+
+	<script>
+		function increaseNumber() {
+			this.value = Number(this.value) + 1;
+		}
+
+		let inputs = document.querySelectorAll('input[type="number"]');
+
+		for (let input of inputs) {
+			input.addEventListener('blur', increaseNumber);
+		}
+	</script>
+

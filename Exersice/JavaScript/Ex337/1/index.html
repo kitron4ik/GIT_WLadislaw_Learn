@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Exercises</title>
+</head>
+<body>
+    <!-- Задание 1 -->
+    <input id="input1" type="text">
+    <p id="paragraph1"></p>
+    <script>
+        const input1 = document.getElementById('input1');
+        const paragraph1 = document.getElementById('paragraph1');
+
+        input1.addEventListener('blur', function () {
+            paragraph1.textContent += input1.value;
+        });
+    </script>
+
+    <!-- Задание 2 -->
+    <input id="input2_1" type="text">
+    <input id="input2_2" type="text">
+    <input id="input2_3" type="text">
+    <button id="button2">Calculate Sum</button>
+    <p id="paragraph2"></p>
+    <script>
+        const input2_1 = document.getElementById('input2_1');
+        const input2_2 = document.getElementById('input2_2');
+        const input2_3 = document.getElementById('input2_3');
+        const button2 = document.getElementById('button2');
+        const paragraph2 = document.getElementById('paragraph2');
+
+        button2.addEventListener('click', function () {
+            const sum = parseInt(input2_1.value) + parseInt(input2_2.value) + parseInt(input2_3.value);
+            paragraph2.textContent = `Sum: ${sum}`;
+        });
+    </script>
+

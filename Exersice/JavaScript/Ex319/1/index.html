@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+	</head>
+	<body>
+		<p id="paragraph">Initial Text</p>
+		<button id="readButton">Read Text</button>
+		<button id="changeButton">Change Text</button>
+		<button id="sumButton">Sum Numbers</button>
+		<button id="sumDivButton">Sum in Div</button>
+		<button id="incrementButton">Increment Number</button>
+		<button id="addExclamationButton">Add Exclamation Mark</button>
+
+		<script>
+			let paragraph = document.querySelector('#paragraph');
+			let readButton = document.querySelector('#readButton');
+			let changeButton = document.querySelector('#changeButton');
+			let sumButton = document.querySelector('#sumButton');
+			let sumDivButton = document.querySelector('#sumDivButton');
+			let incrementButton = document.querySelector('#incrementButton');
+			let addExclamationButton = document.querySelector('#addExclamationButton');
+
+			readButton.addEventListener('click', function() {
+				console.log(paragraph.textContent);
+			});
+
+			changeButton.addEventListener('click', function() {
+				paragraph.textContent = 'New Text';
+			});
+
+			sumButton.addEventListener('click', function() {
+				let numbers = document.querySelectorAll('p[data-number]');
+				let sum = 0;
+
+				numbers.forEach(function(number) {
+					sum += parseInt(number.textContent);
+				});
+
+				console.log('Sum:', sum);
+			});
+
+			sumDivButton.addEventListener('click', function() {
+				let numbers = document.querySelectorAll('p[data-number]');
+				let div = document.querySelector('#sumDiv');
+				let sum = 0;
+
+				numbers.forEach(function(number) {
+					sum += parseInt(number.textContent);
+				});
+
+				div.textContent = 'Sum: ' + sum;
+			});
+
+			incrementButton.addEventListener('click', function() {
+				let number = document.querySelector('#incrementNumber');
+				number.textContent = parseInt(number.textContent) + 1;
+			});
+
+			addExclamationButton.addEventListener('click', function() {
+				paragraph.textContent += '!';
+			});
+		</script>
+	</body>
+</html>
+

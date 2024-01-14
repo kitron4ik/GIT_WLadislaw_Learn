@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+	<p id="paragraph1">text1</p>
+	<p id="paragraph2">text2</p>
+	<p id="paragraph3">text3</p>
+
+	<script>
+		let paragraphs = document.querySelectorAll('p');
+
+		function addExclamation() {
+			console.log(this.textContent);
+			this.textContent += '!';
+			this.removeEventListener('click', addExclamation);
+		}
+
+		for (let paragraph of paragraphs) {
+			paragraph.addEventListener('click', addExclamation);
+		}
+	</script>
+</body>
+
+</html>
+

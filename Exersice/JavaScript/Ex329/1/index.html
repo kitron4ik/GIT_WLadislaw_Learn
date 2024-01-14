@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+	<!-- Задание 1 -->
+	<p class="www">text1</p>
+	<p class="www">text2</p>
+	<p class="www">text3</p>
+	<button onclick="changeText()">Change Text</button>
+
+	<script>
+		function changeText() {
+			let elems = document.querySelectorAll('.www');
+			for (let elem of elems) {
+				elem.textContent = 'text';
+			}
+		}
+	</script>
+
+	<!-- Задание 2 -->
+	<p class="paragraph">Paragraph 1</p>
+	<p class="paragraph">Paragraph 2</p>
+	<p class="paragraph">Paragraph 3</p>
+	<button onclick="addNumbers()">Add Numbers</button>
+
+	<script>
+		function addNumbers() {
+			let elems = document.querySelectorAll('.paragraph');
+			elems.forEach((elem, index) => {
+				elem.textContent += ' ' + (index + 1);
+			});
+		}
+	</script>
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+	<ul>
+		<li>2000</li>
+		<li>2004</li>
+		<li>2021</li>
+		<li>2022</li>
+		<li>2025</li>
+		<li>2031</li>
+	</ul>
+
+	<script>
+		let years = document.querySelectorAll('li');
+		console.log(years);
+		for (let year of years) {
+			console.log(year.textContent);
+		}
+		let sum = 0;
+		for (let year of years) {
+			let digitsSum = Array.from(year.textContent).reduce((acc, digit) => acc + parseInt(digit), 0);
+			if (digitsSum === 6) {
+				console.log(year.textContent);
+				sum += parseInt(year.textContent);
+			}
+		}
+
+		console.log('Sum of selected years:', sum);
+	</script>
+</body>
+
+</html>
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+	</head>
+	<body>
+		<div id="parent">
+			<input value="1">
+			<input value="2">
+		</div>
+
+		<div id="block">
+			<p>1</p>
+			<p>2</p>
+		</div>
+
+		<div class="block">
+			<p>1</p>
+			<p>2</p>
+		</div>
+
+		<p class="www">text</p>
+		<p class="www">text</p>
+
+		<script>
+			// Задание 1
+			let elem1 = document.querySelector('#block p');
+			console.log(elem1);
+
+			// Задание 2
+			let elem2 = document.querySelector('.block p');
+			console.log(elem2);
+
+			// Задание 3
+			let elem3 = document.querySelector('.www');
+			console.log(elem3);
+		</script>
+	</body>
+</html>
+

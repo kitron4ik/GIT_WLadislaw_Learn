@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+	</head>
+	<body>
+		<input id="elem" type="email">
+		<button id="showTypeButton">Show Type</button>
+		<button id="changeTypeButton">Change Type</button>
+
+		<script>
+			let elem = document.querySelector('#elem');
+			let showTypeButton = document.querySelector('#showTypeButton');
+			let changeTypeButton = document.querySelector('#changeTypeButton');
+
+			showTypeButton.addEventListener('click', function() {
+				alert(elem.type);
+			});
+
+			changeTypeButton.addEventListener('click', function() {
+				elem.type = 'submit';
+			});
+		</script>
+	</body>
+</html>
+

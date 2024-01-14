@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+
+	<script>
+		let listItems = document.querySelectorAll('li');
+
+		for (let listItem of listItems) {
+			listItem.addEventListener('click', function () {
+				let currentValue = parseInt(this.textContent);
+				if (currentValue < 10) {
+					console.log(currentValue);
+					this.textContent = currentValue + 1;
+					this.removeEventListener('click', arguments.callee);
+				}
+			});
+		}
+	</script>
+</body>
+
+</html>
+
